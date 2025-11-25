@@ -15,7 +15,6 @@ const episodios: AnimeEpisode[] = [
   { id: 2, title: "3-nen Z-gumi Ginpac...", episode: 2, image: "https://via.placeholder.com/300x170/333333/FFFFFF?text=Anime+2" },
   { id: 3, title: "Sozai Saishuka no Is...", episode: 4, image: "https://via.placeholder.com/300x170/555555/FFFFFF?text=Anime+3" },
   { id: 4, title: "Debu to Love to Aya...", episode: 6, image: "https://via.placeholder.com/300x170/777777/FFFFFF?text=Anime+4" },
-  // ... puedes agregar más
 ];
 
 function GridAnime() {
