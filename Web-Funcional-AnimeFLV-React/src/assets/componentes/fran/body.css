@@ -1,0 +1,77 @@
+/* Contenedor de la tarjeta */
+.anime-card {
+  position: relative; /* Importante para posicionar elementos dentro */
+  border-radius: 10px;
+  overflow: hidden; /* Para que la imagen no se salga de las esquinas redondeadas */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.anime-card:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+/* Imagen */
+.anime-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16/9; /* Mantiene proporción panorámica */
+}
+
+/* Icono de Play */
+.play-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  border: 2px solid white;
+  z-index: 2;
+}
+
+/* Contenedor de texto abajo */
+.anime-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 10px 10px 10px;
+  /* Degradado negro para que el texto blanco se lea bien */
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  z-index: 2;
+  text-align: left;
+}
+
+/* Etiqueta Naranja */
+.episode-badge {
+  background-color: #ff8800; /* El color naranja de AnimeFLV */
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+/* Título */
+.anime-title {
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Pone "..." si el texto es muy largo */
+  font-weight: 600;
+}
