@@ -1,4 +1,4 @@
-import FigureExample from './assets/componentes/fran/body'; 
+import FigureExample from './componentes/fran/body'; 
 import 'bootstrap/dist/css/bootstrap.min.css'; // Asegúrate de tener el CSS de bootstrap
 
 function App() {
