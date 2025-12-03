@@ -1,15 +1,41 @@
+*, :before, :after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
 /* Contenedor de la tarjeta */
 .anime-card {
-  position: relative; /* Importante para posicionar elementos dentro */
+  position: relative;
+  width: 100%; 
   border-radius: 10px;
-  overflow: hidden; /* Para que la imagen no se salga de las esquinas redondeadas */
+  overflow: hidden;
   cursor: pointer;
   transition: transform 0.2s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 0; 
+}
+
+.anime-card2 {
+  position: relative;
+  width: 100%; 
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  background-color: white; /* Para que el texto tenga fondo blanco */
+  height: 100%; /* Asegura que todas las tarjetas de la fila midan lo mismo */
+  display: flex;
+  flex-direction: column; /* Apila imagen arriba y texto abajo */
 }
 
 .anime-card:hover {
   transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.anime-card2:hover {
+  transform: translate(-5px);
 }
 
 /* Imagen */
@@ -19,6 +45,14 @@
   display: block;
   object-fit: cover;
   aspect-ratio: 16/9; /* Mantiene proporción panorámica */
+}
+
+.anime-image2 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 2/3;
 }
 
 /* Icono de Play */
@@ -51,6 +85,14 @@
   text-align: left;
 }
 
+.anime-info2 {
+  position: relative;
+  width: 100%;
+  padding: 10px 5px;
+  background: transparent;
+  text-align: center;
+}
+
 /* Etiqueta Naranja */
 .episode-badge {
   background-color: #ff8800; /* El color naranja de AnimeFLV */
@@ -73,4 +115,14 @@
   overflow: hidden;
   text-overflow: ellipsis; /* Pone "..." si el texto es muy largo */
   font-weight: 600;
+}
+
+.anime-title2 {
+  color: #333;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: -17px 0 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Pone "..." si es muy largo */
 }
