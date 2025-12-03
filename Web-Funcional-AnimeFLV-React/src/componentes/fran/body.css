@@ -1,11 +1,16 @@
 /* Contenedor de la tarjeta */
 .anime-card {
-  position: relative; /* Importante para posicionar elementos dentro */
+  position: relative;
+  /* CAMBIO CLAVE: De 50% a 100%. 
+     Esto hace que llene la columna de Bootstrap y se "peguen" visualmente. */
+  width: 100%; 
   border-radius: 10px;
-  overflow: hidden; /* Para que la imagen no se salga de las esquinas redondeadas */
+  overflow: hidden;
   cursor: pointer;
   transition: transform 0.2s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  /* OPCIONAL: Si quieres quitar el margen inferior extra */
+  margin-bottom: 0; 
 }
 
 .anime-card:hover {
