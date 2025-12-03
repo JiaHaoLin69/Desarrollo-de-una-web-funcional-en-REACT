@@ -1,32 +1,30 @@
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
+import "./styles.css";
+import logo from "./logo.png";
 
 function TypesExample() {
   return (
-    <div style={{
-      display: "flex",
-      alignItems: "center",
-      gap: "1.5rem",
-      padding: "15px",
-    }}>
+    <div className="header-container">
 
-      <h1 style={{ margin: 0, fontSize: "1.8rem", color: "white" }}>
-        AnimeFLV React
-      </h1>
+      <a href="/" className="header-logo">
+        <img src={logo} alt="animeflv-logo" />
+      </a>
 
+      <div className="header-menu-group">
 
-      <Button variant="primary">Inicio</Button>
-      <Button variant="secondary">Directorio Anime</Button>
+        <Button className="header-btn">INICIO</Button>
+        <Button className="header-btn">DIRECTORIO ANIME</Button>
 
-      {/* Buscador */}
-      <InputGroup style={{ maxWidth: "280px", marginLeft: "auto" }}>
-        <Form.Control placeholder="Buscar..." />
-        <Button variant="primary">🔍</Button>
-      </InputGroup>
+        <InputGroup className="header-search">
+          <Form.Control placeholder="Buscar..." />
+          <Button className="search-btn">🔍</Button>
+        </InputGroup>
 
-      {/* Login */}
-      <Button variant="outline-primary">Login</Button>
+        <Button className="header-login">LOGIN</Button>
+
+      </div>
     </div>
   );
 }
