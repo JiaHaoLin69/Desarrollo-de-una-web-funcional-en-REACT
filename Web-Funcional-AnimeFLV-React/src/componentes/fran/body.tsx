@@ -45,6 +45,19 @@ function GridAnime() {
           </Col>
         ))}
       </Row>
+      <h2>Ultimos animes agregados</h2>
+        <Row className="mb-5">
+          {episodios.map((anime) => (
+          <Col xs={12} md={4} lg={2} className="mb-4" key={anime.id}>
+            <div className="anime-card2">
+              <img src={anime.image} alt={anime.title} className="anime-image2" />
+            </div>
+            <div className="anime-info2">
+                <h3 className="anime-title2">{anime.title}</h3>
+              </div>
+          </Col>
+        ))}
+        </Row>
 </Container>
   );
 }
