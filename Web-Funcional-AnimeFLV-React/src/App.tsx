@@ -1,14 +1,20 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'; 
+
 import Header from './componentes/andres/Header'; 
-import 'bootstrap/dist/css/bootstrap.min.css'; // Asegúrate de tener el CSS de bootstrap
 import Body from './componentes/fran/body'; 
 import Footer from './componentes/jiahao/footer';
+import AsideAnimes from './componentes/jiahao/aside';
 
 function App() {
   return (
-    <div className="App">
+    <div className="layout-grid">  
+      {}
       <Header />
-      <Body/>
-      <Footer/>
+      <AsideAnimes />
+      <Body />
+      <Footer />
+      
     </div>
   );
 }
