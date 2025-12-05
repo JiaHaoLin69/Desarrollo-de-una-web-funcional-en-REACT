@@ -7,34 +7,34 @@ import Body from './componentes/fran/body';
 import Footer from './componentes/jiahao/footer';
 import AsideAnimes from './componentes/jiahao/aside'
 import PaginaDetalle from './componentes/jiahao/rutas';
-
+import PaginaError from './componentes/jiahao/error';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="layout-grid">
-        {}
+        
         <Header />
-        {}
+        
         <AsideAnimes />
-        {/* AQUÍ ESTÁ EL CAMBIO: Área de contenido dinámico */}
-        {}
+        
         <div className="content-area">
           <Routes>
-            {}
+            {/* 1. Ruta Inicio */}
             <Route path="/" element={<Body />} />
 
-            {/* Rutas Dinámicas: Cualquier cosa que empiece por /ver/ */}
+            {/* 2. Rutas para ver Animes */}
             <Route path="/ver/:slug" element={<PaginaDetalle />} />
-            
-            {}
-            <Route path="/login" element={<PaginaDetalle />} />
-            <Route path="/directorio" element={<PaginaDetalle />} />
-            <Route path="*" element={<PaginaDetalle />} /> {/* Comodín para todo lo demás */}
+            <Route path="/anime/:slug" element={<PaginaDetalle />} /> 
+
+            {/* --- ELIMINADO: La línea que causaba el conflicto --- */}
+            {/* <Route path="*" element={<PaginaDetalle />} />  <-- ESTA LÍNEA SOBRABA */}
+
+            {/* 3. COMODÍN PARA ERROR 404 (Ahora sí atrapará lo que no sea inicio ni anime) */}
+            <Route path="*" element={<PaginaError />} />
           </Routes>
         </div>
 
-        {/* El Footer siempre visible */}
         <Footer />
       </div>
     </BrowserRouter>
