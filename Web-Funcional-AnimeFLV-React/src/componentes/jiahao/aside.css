@@ -64,7 +64,6 @@
   transition: background-color 0.1s ease;
   cursor: pointer;
   color: #565656; 
-  /* Asegura que el contenedor respete el ancho disponible */
   width: 100%;
 }
 
@@ -78,16 +77,12 @@
   background-color: #f9f9f9;
 }
 
-
-/* --- CAMBIO PRINCIPAL AQUÍ (IZQUIERDA) --- */
 .flv-item-left {
   display: flex;
   align-items: center;
   gap: 10px;
   overflow: hidden; 
   padding-right: 5px;
-  
-  /* Flexbox magic: ocupa el espacio disponible pero permite encogerse */
   flex: 1; 
   min-width: 0; 
 }
@@ -97,7 +92,6 @@
   color: #ddd;
   display: flex;
   align-items: center;
-  /* Evita que el punto desaparezca al encoger */
   flex-shrink: 0; 
 }
 
@@ -129,11 +123,9 @@
   border-radius: 3px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-
-  /* Asegura que la etiqueta no se encoja nunca */
   min-width: fit-content;
   flex-shrink: 0;
-  margin-left: auto; /* Empuja hacia la derecha si sobra espacio */
+  margin-left: auto; 
 }
 
 .flv-badge.anime {
