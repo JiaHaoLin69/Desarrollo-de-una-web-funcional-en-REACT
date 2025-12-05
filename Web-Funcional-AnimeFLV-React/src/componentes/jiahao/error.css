@@ -1,0 +1,28 @@
+div{
+      padding: '60px 20px';
+      text-align: 'center'; 
+      display: 'flex'; 
+      flex-direction: 'column';
+      align-items: 'center';
+      min-height: '60vh';
+}
+
+h1{
+    font-size: '72px';
+    color: '#fa8b42';
+    margin: 0;
+    font-Weight: 'bold';
+}
+h2{
+    font-size: '24px';
+    margin-bottom: '20px';
+}
+
+.error-inicio{
+        background-color: '#fa8b42';
+        color: 'white';
+        padding: '10px 20px';
+        border-radius: '5px';
+        text-decoration: 'none'; 
+        font-weight: 'bold'; 
+}
