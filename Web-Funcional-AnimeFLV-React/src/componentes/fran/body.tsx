@@ -1,6 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import './body.css'; 
 import { FaPlay } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 interface AnimeEpisode {
   id: number;
@@ -47,6 +48,7 @@ const galeria: AnimeGalery[] = [
 
 function GridAnime() {
   
+  const crearSlug = (titulo: string) => titulo.toLowerCase().replace(/ /g, '-');
   // Función auxiliar para asignar clase según el tipo
   const getTypeClass = (type: string) => {
     switch(type) {
@@ -66,6 +68,7 @@ function GridAnime() {
       <Row className="mb-5">
         {episodios.map((anime) => (
           <Col xs={12} md={4} lg={3} className="mb-4" key={anime.id}>
+            <Link to={`/ver/${crearSlug(anime.title)}`} style={{ textDecoration: 'none' }}>
             <div className="anime-card">
               <img src={anime.image} alt={anime.title} className="anime-image" />
               <div className="play-icon">{<FaPlay />}</div>
@@ -74,6 +77,7 @@ function GridAnime() {
                 <h3 className="anime-title">{anime.title}</h3>
               </div>
             </div>
+            </Link>
           </Col>
         ))}
       </Row>
@@ -83,6 +87,7 @@ function GridAnime() {
           {galeria.map((anime) => (
           // Cambiado lg={2} a lg={3} para tener filas de 4 elementos como en la foto
           <Col xs={6} md={4} lg={3} className="mb-4" key={anime.id}> 
+            <Link to={`/anime/${crearSlug(anime.title)}`} style={{ textDecoration: 'none' }}>
             <div className="anime-card2-container">
                 <div className="anime-poster-wrapper">
                     {/* Listón de ESTRENO (Condicional) */}
@@ -104,6 +109,7 @@ function GridAnime() {
                     <h3 className="anime-title2">{anime.title}</h3>
                 </div>
             </div>
+            </Link>
           </Col>
         ))}
       </Row>
