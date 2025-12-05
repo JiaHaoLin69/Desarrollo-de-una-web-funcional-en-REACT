@@ -4,9 +4,6 @@
     padding: 0;
 }
 
-/* --- ESTILOS GENERALES (Mantenidos) --- */
-
-/* Contenedor de la tarjeta Episodios (Horizontal) */
 .anime-card {
   position: relative;
   width: 100%; 
@@ -79,24 +76,20 @@
   font-weight: 600;
 }
 
-/* --- ESTILOS NUEVOS PARA "ULTIMOS ANIMES" (Verticales) --- */
-
-/* Contenedor principal de la tarjeta vertical */
 .anime-card2-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
     cursor: pointer;
-    background: transparent; /* Fondo transparente como en la imagen */
+    background: transparent; 
 }
 
-/* Wrapper de la imagen para posicionar elementos absolutos */
 .anime-poster-wrapper {
     position: relative;
     width: 100%;
     border-radius: 6px;
-    overflow: hidden; /* Importante para que el ribbon no se salga */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave */
+    overflow: hidden; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -105,16 +98,14 @@
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-/* Imagen Vertical */
 .anime-image2 {
     width: 100%;
     height: 100%;
     display: block;
-    aspect-ratio: 2/3; /* Proporción típica de póster */
+    aspect-ratio: 2/3;
     object-fit: cover;
 }
 
-/* --- ETIQUETA "ESTRENO" (Cinta Verde) --- */
 .ribbon-wrapper {
     width: 85px;
     height: 85px;
@@ -136,13 +127,12 @@
     left: -28px;
     top: 15px;
     width: 120px;
-    background-color: #00b036; /* Verde Estreno */
+    background-color: #00b036;
     font-size: 0.7rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     text-transform: uppercase;
 }
 
-/* --- BADGES DE TIPO (Anime, Ova, Pelicula) --- */
 .type-badge {
     position: absolute;
     bottom: 0;
@@ -151,25 +141,24 @@
     font-size: 0.7rem;
     font-weight: 700;
     padding: 4px 12px;
-    border-top-right-radius: 12px; /* Forma redondeada estilo pestaña */
+    border-top-right-radius: 12px;
     text-transform: uppercase;
     z-index: 5;
     letter-spacing: 0.5px;
 }
 
 .badge-anime {
-    background-color: #00b4db; /* Azul Cyan */
+    background-color: #00b4db;
 }
 
 .badge-pelicula {
-    background-color: #ff3355; /* Rojo/Rosa */
+    background-color: #ff3355; 
 }
 
 .badge-ova {
-    background-color: #ff9900; /* Naranja */
+    background-color: #ff9900; 
 }
 
-/* Información Texto Debajo */
 .anime-info2 {
     padding: 0 5px;
     text-align: center;
@@ -181,7 +170,6 @@
     font-weight: 700;
     color: #333;
     line-height: 1.3;
-    /* Limitar a 2 lineas si es muy largo */
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
@@ -192,14 +180,14 @@
 .welcome-banner {
   background-color: #2d333b;
   border-bottom: 4px solid #00dbf3; 
-  color: #a0a0a0; /* Gris claro para el texto normal */
-  font-family: 'Open Sans', sans-serif; /* Fuente sans-serif limpia */
-  font-size: 1.5rem; /* Tamaño grande */
-  font-weight: 300; /* Letra fina para el eslogan */
+  color: #a0a0a0; 
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300; 
   padding: 25px 20px;
   text-align: center;
-  border-radius: 6px; /* Bordes ligeramente redondeados */
-  margin-bottom: 30px; /* Separación con los episodios */
+  border-radius: 6px;
+  margin-bottom: 30px; 
 
   box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
 }

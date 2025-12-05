@@ -15,15 +15,11 @@ body {
   min-height: 100vh;
 }
 
-/* POSICIONAMIENTO DE COMPONENTES */
-
-/* 1. HEADER */
 .header-container {
   grid-column: 1 / -1; 
   grid-row: 1;
 }
 
-/* 2. ASIDE (BARRA LATERAL) */
 .flv-aside {
   grid-column: 2 / 3; 
   grid-row: 2;
@@ -40,11 +36,24 @@ body {
   max-width: none !important; 
 }
 
-/* 4. FOOTER */
 .flv-footer {
   grid-column: 1 / -1; 
   grid-row: 3;
   margin-top: 40px;
+}
+
+.content-area {
+  grid-column: 3 / 4; 
+  grid-row: 2;
+  margin-top: 20px;
+  width: 100%;
+}
+
+
+.content-area > .container,
+.content-area > .container-fluid {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /*  RESPONSIVE (MÓVIL) */
@@ -64,26 +73,8 @@ body {
     padding-left: 15px !important;
     padding-right: 15px !important;
   }
-}
-
-/* 3. BODY Y CONTENIDO DINÁMICO */
-.content-area {
-  grid-column: 3 / 4; 
-  grid-row: 2;
-  margin-top: 20px;
-  width: 100%;
-}
-
-
-.content-area > .container,
-.content-area > .container-fluid {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* MÓVIL */
-@media (max-width: 1023px) {
   .content-area {
     padding: 0 15px;
   }
 }
+
