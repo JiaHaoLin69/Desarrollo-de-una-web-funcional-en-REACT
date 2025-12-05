@@ -1,0 +1,12 @@
+div {
+    padding: '40px';
+    color: '#333';
+}
+.div-rutas{
+    background-color: '#eee';
+    height: '400px';
+    display: 'flex'; 
+    align-items: 'center';
+    justify-content: 'center';
+    border-radius: '8px';
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './aside.css'; 
 
 interface AnimeItem {
@@ -16,7 +17,7 @@ const animesEmision: AnimeItem[] = [
   { id: 4, title: 'One Punch Man', type: 'ANIME', slug: 'one-punch-man' },
   { id: 5, title: 'Dan Da Dan', type: 'ANIME', slug: 'dan-da-dan' },
   { id: 6, title: 'Gachiakuta', type: 'ANIME', slug: 'gachiakuta' },
-  { id: 7, title: 'Given', type: 'ANIME', slug: 'Given' },
+  { id: 7, title: 'Given', type: 'PELICULA', slug: 'Given' },
   { id: 8, title: 'Banana Fish', type: 'ANIME', slug: 'banana-fish' }, 
   { id: 9, title: 'Watashi Ga Koibito ni Nareru', type: 'ANIME', slug: 'watanare' },
   { id: 10, title: 'Watashi wo Tabetai Hitodenashi', type: 'ANIME', slug: 'watatabe' },
@@ -44,21 +45,21 @@ const AsideAnimes: React.FC = () => {
         {animesEmision.map((anime) => (
           <li key={anime.id}>
             {}
-            <a href={`/anime/${anime.slug}`} className="flv-anime-item">
+            <Link to={`/ver/${anime.slug}`} className="flv-anime-item">
+                <a href={`/anime/${anime.slug}`} className="flv-anime-item">
               
-              <div className="flv-item-left">
-                <span className="flv-dot">●</span>
-                <span className="flv-text" title={anime.title}>
+                <div className="flv-item-left">
+                    <span className="flv-dot">●</span>
+                    <span className="flv-text" title={anime.title}>
                   {anime.title}
-                </span>
-              </div>
-
+                    </span>
+                </div>
               {}
               <span className={`flv-badge ${anime.type.toLowerCase()}`}>
                 {anime.type}
               </span>
-              
-            </a>
+                </a>
+            </Link>
           </li>
         ))}
       </ul>

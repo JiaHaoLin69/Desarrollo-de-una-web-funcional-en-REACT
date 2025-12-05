@@ -54,6 +54,7 @@
   margin: 0;
 }
 
+/* Item de la lista */
 .flv-anime-item {
   display: flex;
   justify-content: space-between;
@@ -63,6 +64,7 @@
   transition: background-color 0.1s ease;
   cursor: pointer;
   color: #565656; 
+  width: 100%;
 }
 
 
@@ -75,13 +77,14 @@
   background-color: #f9f9f9;
 }
 
-
 .flv-item-left {
   display: flex;
   align-items: center;
   gap: 10px;
   overflow: hidden; 
   padding-right: 5px;
+  flex: 1; 
+  min-width: 0; 
 }
 
 .flv-dot {
@@ -89,6 +92,7 @@
   color: #ddd;
   display: flex;
   align-items: center;
+  flex-shrink: 0; 
 }
 
 .flv-anime-item:hover .flv-dot {
@@ -102,6 +106,7 @@
   white-space: nowrap;     
   overflow: hidden;        
   text-overflow: ellipsis;  
+  display: block; 
 }
 
 .flv-anime-item:hover .flv-text {
@@ -109,15 +114,18 @@
 }
 
 
+/* --- CAMBIO PRINCIPAL AQUÍ (DERECHA / BADGE) --- */
 .flv-badge {
   font-size: 9px;
   font-weight: 700;
   color: #fff;
   padding: 2px 6px;
   border-radius: 3px;
-  min-width: fit-content;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  min-width: fit-content;
+  flex-shrink: 0;
+  margin-left: auto; 
 }
 
 .flv-badge.anime {
