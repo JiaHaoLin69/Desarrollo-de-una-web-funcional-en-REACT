@@ -1,6 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import './body.css'; 
 import { FaPlay } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 interface AnimeEpisode {
   id: number;
@@ -28,37 +29,50 @@ const episodios: AnimeEpisode[] = [
 ];
 
 function GridAnime() {
+  const crearSlug = (titulo: string) => titulo.toLowerCase().replace(/ /g, '-');
+
   return (
     <Container fluid className="mt-4">
       <h2 className="mb-4 text-secondary">Últimos episodios</h2>
       <Row className="mb-5">
         {episodios.map((anime) => (
           <Col xs={12} md={4} lg={2} className="mb-4" key={anime.id}>
-            <div className="anime-card">
-              <img src={anime.image} alt={anime.title} className="anime-image" />
-              <div className="play-icon">{<FaPlay />}</div>
-              <div className="anime-info">
-                <span className="episode-badge">Episodio {anime.episode}</span>
-                <h3 className="anime-title">{anime.title}</h3>
+            
+            {}
+            <Link to={`/ver/${crearSlug(anime.title)}`} style={{ textDecoration: 'none' }}>
+              <div className="anime-card">
+                <img src={anime.image} alt={anime.title} className="anime-image" />
+                <div className="play-icon">{<FaPlay />}</div>
+                <div className="anime-info">
+                  <span className="episode-badge">Episodio {anime.episode}</span>
+                  <h3 className="anime-title">{anime.title}</h3>
+                </div>
               </div>
-            </div>
+            </Link>
+
           </Col>
         ))}
       </Row>
+
       <h2>Ultimos animes agregados</h2>
-        <Row className="mb-5">
-          {episodios.map((anime) => (
+      <Row className="mb-5">
+        {episodios.map((anime) => (
           <Col xs={12} md={4} lg={2} className="mb-4" key={anime.id}>
-            <div className="anime-card2">
-              <img src={anime.image} alt={anime.title} className="anime-image2" />
-            </div>
-            <div className="anime-info2">
-                <h3 className="anime-title2">{anime.title}</h3>
-              </div>
+             
+             {}
+             <Link to={`/anime/${crearSlug(anime.title)}`} style={{ textDecoration: 'none' }}>
+                <div className="anime-card2">
+                  <img src={anime.image} alt={anime.title} className="anime-image2" />
+                </div>
+                <div className="anime-info2">
+                  <h3 className="anime-title2">{anime.title}</h3>
+                </div>
+             </Link>
+
           </Col>
         ))}
-        </Row>
-</Container>
+      </Row>
+    </Container>
   );
 }
 
