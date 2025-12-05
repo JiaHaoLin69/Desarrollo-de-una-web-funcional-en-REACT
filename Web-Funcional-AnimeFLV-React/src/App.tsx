@@ -20,17 +20,15 @@ function App() {
         
         <div className="content-area">
           <Routes>
-            {/* 1. Ruta Inicio */}
+            {}
             <Route path="/" element={<Body />} />
 
-            {/* 2. Rutas para ver Animes */}
+            {}
             <Route path="/ver/:slug" element={<PaginaDetalle />} />
             <Route path="/anime/:slug" element={<PaginaDetalle />} /> 
-
-            {/* --- ELIMINADO: La línea que causaba el conflicto --- */}
-            {/* <Route path="*" element={<PaginaDetalle />} />  <-- ESTA LÍNEA SOBRABA */}
-
-            {/* 3. COMODÍN PARA ERROR 404 (Ahora sí atrapará lo que no sea inicio ni anime) */}
+            {}
+            {}
+            {}
             <Route path="*" element={<PaginaError />} />
           </Routes>
         </div>

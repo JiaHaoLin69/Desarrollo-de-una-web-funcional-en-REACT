@@ -27,32 +27,32 @@ const HamburgerMenu = () => {
 
   return (
     <div>
-      {/* Botón hamburguesa */}
+      {}
       <button className="hamburger-menu" onClick={toggleMenu}>
         <div></div>
         <div></div>
         <div></div>
       </button>
 
-      {/* Texto MENU */}
+      {}
       <span className="hamburger-menu-text">MENU</span>
 
-      {/* Menú lateral */}
+      {}
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
 
-        {/* 1️⃣ BUSCADOR */}
+        {}
         <InputGroup className="sidebar-search">
           <Form.Control placeholder="Buscar..." />
           <Button className="search-btn">🔍</Button>
         </InputGroup>
 
-        {/* 2️⃣ LOGIN */}
+        {}
         <a className="sidebar-login" href="/login">LOGIN</a>
 
-        {/* 3️⃣ INICIO */}
+        {}
         <a href="/">INICIO</a>
 
-        {/* 4️⃣ DIRECTORIO ANIME */}
+        {}
         <a href="/directorio">DIRECTORIO ANIME</a>
 
       </div>
